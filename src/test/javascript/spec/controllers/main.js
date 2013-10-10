@@ -9,6 +9,7 @@ describe('Controller: MainCtrl', function () {
         scope,
         httpBackend;
 
+
     // Initialize the controller and a mock scope
     beforeEach(inject(function ($controller, $rootScope) {
         scope = $rootScope.$new();
@@ -31,9 +32,9 @@ describe('Controller: MainCtrl', function () {
 
             httpBackend.expectPOST("rest/assays").respond("{\"id\":1}");
 
-            var result = scope.generateId();
+            scope.generateId();
             httpBackend.flush();
-            expect(result).not.toBe(null);
+            expect(scope.assayId).toBe(1);
 
         });
 
