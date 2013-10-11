@@ -1,14 +1,22 @@
 'use strict';
 
 angular.module('assayManagementApp')
-    .controller('MainCtrl', function ($scope, $resource) {
+    .controller('CreateAssayCtrl', function ($scope, $resource) {
 
-        var AssayService = $resource('rest/assays', {}, {
-            post: {method: 'POST', responseType: 'text'}
-        });
+        var assayService = $resource('rest/assays', {}, {});
 
         $scope.generateId = function () {
-            $scope.assayId = AssayService.post();
+            $scope.assayId = assayService.save();
         }
 
     });
+
+angular.module('assayManagementApp')
+    .controller('ViewAssayCtrl', function ($scope, $routeParams, $resource) {
+
+        var assayService = $resource('rest/assays/:assayId', {});
+        $scope.assayId = assayService.get({assayId:$routeParams.assayId});
+
+    });
+
+

@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <testsuites>
-  <testsuite name="Chrome 30.0 (Mac)" package="" timestamp="2013-10-10T15:50:04" id="0" hostname="MathBook Pro" tests="1" errors="0" failures="1" time="0.021">
+  <testsuite name="PhantomJS 1.9 (Mac)" package="" timestamp="2013-10-11T14:09:36" id="0" hostname="MathBook Pro" tests="1" errors="0" failures="1" time="0.012">
     <properties>
-      <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36"/>
+      <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; PPC Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.2 Safari/534.34"/>
     </properties>
-    <testcase name="should make a call to assays rest service" time="0.021" classname="Chrome 30.0 (Mac).Controller: MainCtrl generateId">
-      <failure type="">TypeError: Object [object Object] has no method &apos;generateId&apos;
-    at null.&lt;anonymous&gt; (/Users/paulkelly/Downloads/RESTfulExample/src/test/javascript/spec/controllers/main.js:32:35)
+    <testcase name="should make a call to assays rest service" time="0.012" classname="PhantomJS 1.9 (Mac).Controller: CreateAssayCtrl generateId">
+      <failure type="">Expected { id : 1 } to be 1.
 </failure>
     </testcase>
     <system-out><![CDATA[
